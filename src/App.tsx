@@ -1,15 +1,16 @@
 
-import Navbar from './components/Navbar'
-import Page from './components/Page'
+import { ParallaxEffect } from './components/ParallaxEffect'
+
 
 function App() {
 
   return (
-    <>
-     <Navbar />
-     <Page  />
-     <Page  />
-    </>
+
+    <div className=' bg-zinc-950'>
+      <ParallaxEffect  />
+
+    </div>
+
   )
 }
 

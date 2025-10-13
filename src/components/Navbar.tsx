@@ -44,7 +44,6 @@ const Navbar = () => {
       gsap.to(menuRef.current, {
         x: 0,
         duration: 1,
-        opacity: 1,
         ease: "power2.out",
         display: 'block'
       });
@@ -52,7 +51,6 @@ const Navbar = () => {
       gsap.to(menuRef.current, {
         x: '100%',
         duration: 1,
-        opacity: 1,
         ease: "power2.out",
       });
     }
@@ -86,7 +84,7 @@ const Navbar = () => {
 
       <div
         ref={menuRef}
-        className="fixed w-[30%] h-dvh right-0 top-0 bg-sky-200  justify-center text-2xl"
+        className="fixed w-screen h-dvh right-0 top-0 bg-sky-200  justify-center text-2xl"
         style={{ transform: "translateX(100%)" }}
         >
           <div className="absolute top-4 right-4">
