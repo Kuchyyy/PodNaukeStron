@@ -1,4 +1,4 @@
-import { ReactLenis } from "@studio-freight/lenis/react";
+import { ReactLenis } from "./ReactLenis";
 import {
   motion,
   useMotionTemplate,
@@ -10,24 +10,21 @@ import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
 
 export const ParallaxEffect = () => {
-  return (
-    <div className="bg-zinc-950">
-      <ReactLenis
-        root
-        options={{
-          // Learn more -> https://github.com/darkroomengineering/lenis?tab=readme-ov-file#instance-settings
-          lerp: 0.05,
-          //   infinite: true,
-          //   syncTouch: true,
-        }}
-      >
-        <Nav />
-        <Hero />
-        <Schedule />
-      </ReactLenis>
-    </div>
-  );
-};
+    return (
+      <div className="bg-zinc-950">
+        <ReactLenis
+          root
+          options={{
+            lerp: 0.05,
+          }}
+        >
+          <Nav />
+          <Hero />
+          <Schedule />
+        </ReactLenis>
+      </div>
+    );
+  };
 
 const Nav = () => {
   return (

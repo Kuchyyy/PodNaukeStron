@@ -1,5 +1,5 @@
-
-import { ParallaxEffect } from './components/ParallaxEffect'
+import Framer2 from './components/Framer2'
+import NavZFramer from './components/NavZFramer'
 
 
 function App() {
@@ -7,8 +7,8 @@ function App() {
   return (
 
     <div className=' bg-zinc-950'>
-      <ParallaxEffect  />
-
+      <NavZFramer /> 
+      <Framer2 />
     </div>
 
   )
