@@ -1,5 +1,6 @@
-import Framer2 from './components/Framer2'
-import NavZFramer from './components/NavZFramer'
+
+import Tekst from './components/Tekst'
+
 
 
 function App() {
@@ -7,8 +8,7 @@ function App() {
   return (
 
     <div className=' bg-zinc-950'>
-      <NavZFramer /> 
-      <Framer2 />
+      <Tekst />
     </div>
 
   )

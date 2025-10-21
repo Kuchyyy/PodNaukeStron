@@ -8,11 +8,11 @@ const NavZFramer = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const prev = scrollY.getPrevious() ?? 0;
-    if (latest > prev && latest > 100) {
-      // scroll w dół
+    if (latest === 0) {
+      setHidden(false);
+    } else if (latest > prev) {
       setHidden(true);
-    } else {
-      // scroll w górę
+    } else if (latest < prev) {
       setHidden(false);
     }
   });

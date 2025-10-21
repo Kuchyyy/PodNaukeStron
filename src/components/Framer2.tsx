@@ -28,6 +28,14 @@ const Framer2 = () => {
         </motion.div>
 
       </div>
+          <div ref={ref}>
+            <motion.div
+              style={{ scale, opacity }}
+              className="bg-green-500 text-white p-12 rounded-lg shadow-lg text-center font-bold text-2xl"
+            >
+              Skroluj mnie i zobacz efekt ✨
+            </motion.div>
+          </div>
 
       {/* 2. Slide z lewej przy scrollu */}
       <motion.div
@@ -40,14 +48,6 @@ const Framer2 = () => {
       </motion.div>
 
       {/* 3. Sekcja reagująca na scroll (scale/opacity) */}
-      <div ref={ref}>
-        <motion.div
-          style={{ scale, opacity }}
-          className="bg-green-500 text-white p-12 rounded-lg shadow-lg text-center font-bold text-2xl"
-        >
-          Skroluj mnie i zobacz efekt ✨
-        </motion.div>
-      </div>
 
       {/* 4. Infinite fade-in/out przy powrocie do widoku */}
       <motion.div
@@ -59,6 +59,14 @@ const Framer2 = () => {
       >
         Za każdym razem gdy mnie zobaczysz — pojawiam się na nowo 🔁
       </motion.div>
+
+      <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.66 }} 
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="w-40 h-40 bg-green-500 rounded-xl m-40"
+    />
     </div>
   );
 };
