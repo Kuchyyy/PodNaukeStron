@@ -1,36 +1,38 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 const Tekst = () => {
-    return (
-        <div className="bg-stone-100 w-full">
-            <div className="bg-stone-100 flex flex-col gap-2 w-[96%] mx-auto">
-                
-                <div className="bg-stone-100 h-screen">
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
 
-                </div>
-                <div className="bg-zinc-700 h-screen flex items-end justify-start relative rounded-t-2xl">
-                <p className="text-white text-8xl uppercase font-bold font-mono sticky bottom-0 -translate-y-1 p-2">
-                    tekst po lewej
-                </p>
-                </div>
-        
-                {/* Sekcja prawa */}
-                <div className="bg-zinc-700 h-screen flex items-end justify-start relative">
-                <p className="text-white text-8xl uppercase font-bold font-mono sticky bottom-0">
-                    tekst po prawej
-                </p>
-                </div>
-        
-                {/* Sekcja lewa */}
-                <div className="bg-zinc-700 h-screen flex items-end justify-start relative rounded-b-2xl">
-                <p className="text-white text-8xl uppercase font-bold font-mono sticky bottom-0">
-                    tekst po lewej
-                </p>
-                </div>
-                <div className="bg-stone-100 h-screen"></div>
-            </div>
+  const textScale = useTransform(scrollYProgress, [0, 1], [1, 12]);
 
-        </div>
-    );
-  };
-  
-  export default Tekst;
-  
+  return (
+    <div className="w-full">
+      <div
+        ref={sectionRef}
+        className="relative h-[200vh] bg-black flex items-center justify-center overflow-hidden"
+      >
+        {/* Stałe zdjęcie w tle */}
+        <img
+          src="/firma.png"
+          alt="firma"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Litery jako maska */}
+        <motion.h1
+          style={{ scale: textScale }}
+          className="text-[20vw] font-extrabold uppercase text-white mix-blend-difference relative z-10"
+        >
+          BRADOS
+        </motion.h1>
+      </div>
+    </div>
+  );
+};
+
+export default Tekst;

@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@layer utilities {
+
+    .masked {
+        -webkit-mask-image: text("BRADOS");
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        mask-image: text("BRADOS");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+      }
+      
+}
