@@ -1,39 +1,50 @@
-import gsap from "gsap"
-import { useEffect, useRef } from "react"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger)
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const Tekst = () => {
-
   const container = useRef(null);
-  const title = useRef(null);
 
-  useEffect(() => {
-    gsap.to(title.current, {
-      scale: 900,
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top top",
-        end: "+=10000",
-        scrub: true,
-        pin: true,
-      },
-    });
-  }, []);
+  // animacja na przestrzeni 100vh (jeden ekran)
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 200]);
+  const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
   
 
   return (
-    
-    <div className="min-h-screen">
-      <img src="firma.png" alt="" className="fixed inset-0 h-screen w-screen object-cover" />
+    <div >
+      {/* obrazek w tle */}
+      <img
+        src="firma.png"
+        alt=""
+        className="fixed inset-0 w-screen h-screen object-cover -z-10"
+      />
 
+      {/* sekcja 1 z animacją */}
+      <div
+        ref={container}
+        className="h-[200vh] w-screen bg-white mix-blend-screen"
+      >
+        <div className="sticky top-0 h-screen flex justify-center items-center">
+          <motion.h1
+            style={{ scale, opacity }}
+            className="text-8xl font-extrabold origin-center"
+          >
+            BRADOS
+          </motion.h1>
+        </div>
+      </div>
 
-      <div ref={container}  className="h-screen w-screen flex justify-center items-center mix-blend-screen bg-stone-100 z-10">
-        <h1 ref={title} className="text-8xl font-bold">SONOS</h1>
+      {/* sekcja 2 (ostatnia) */}
+      <div className="h-screen bg-white flex justify-center items-center">
+        <p className="text-4xl">Druga sekcja</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Tekst
+export default Tekst;

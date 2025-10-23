@@ -1,4 +1,5 @@
 
+import Framer3 from './components/Framer3'
 import Tekst from './components/Tekst'
 
 
@@ -7,8 +8,9 @@ function App() {
 
   return (
 
-    <div className=' bg-zinc-950'>
+    <div >
       <Tekst />
+      <Framer3 /> 
     </div>
 
   )
