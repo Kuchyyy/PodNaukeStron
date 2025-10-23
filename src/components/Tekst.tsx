@@ -1,38 +1,39 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import gsap from "gsap"
+import { useEffect, useRef } from "react"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Tekst = () => {
-  const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
 
-  const textScale = useTransform(scrollYProgress, [0, 1], [1, 12]);
+  const container = useRef(null);
+  const title = useRef(null);
+
+  useEffect(() => {
+    gsap.to(title.current, {
+      scale: 900,
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top top",
+        end: "+=10000",
+        scrub: true,
+        pin: true,
+      },
+    });
+  }, []);
+  
 
   return (
-    <div className="w-full">
-      <div
-        ref={sectionRef}
-        className="relative h-[200vh] bg-black flex items-center justify-center overflow-hidden"
-      >
-        {/* Stałe zdjęcie w tle */}
-        <img
-          src="/firma.png"
-          alt="firma"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+    
+    <div className="min-h-screen">
+      <img src="firma.png" alt="" className="fixed inset-0 h-screen w-screen object-cover" />
 
-        {/* Litery jako maska */}
-        <motion.h1
-          style={{ scale: textScale }}
-          className="text-[20vw] font-extrabold uppercase text-white mix-blend-difference relative z-10"
-        >
-          BRADOS
-        </motion.h1>
+
+      <div ref={container}  className="h-screen w-screen flex justify-center items-center mix-blend-screen bg-stone-100 z-10">
+        <h1 ref={title} className="text-8xl font-bold">SONOS</h1>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Tekst;
+export default Tekst
