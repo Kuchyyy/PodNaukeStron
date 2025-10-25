@@ -1,16 +1,11 @@
-
-import Framer3 from './components/Framer3'
-import Tekst from './components/Tekst'
-
-
+import Over from "./components/Over"
 
 function App() {
 
   return (
 
     <div >
-      <Tekst />
-      <Framer3 /> 
+      <Over />
     </div>
 
   )
