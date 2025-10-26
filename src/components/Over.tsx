@@ -1,7 +1,7 @@
 const Over = () => {
     return (
       <div className="overscroll-none">
-        <section className="relative w-screen h-[300vh]">
+        <section className="relative w-screen h-[400vh]">
           <div className="sticky top-0 h-screen w-screen flex items-center justify-center z-0 ">
             <img
               src="firma.png"
