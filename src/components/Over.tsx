@@ -1,28 +1,47 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 const Over = () => {
-    return (
-      <div className="overscroll-none">
-        <section className="relative w-screen h-[400vh]">
-          <div className="sticky top-0 h-screen w-screen flex items-center justify-center z-0 ">
-            <img
-              src="firma.png"
-              alt="firma"
-              className="absolute inset-0 w-full h-full object-cover "
-            />
-          </div>
-  
-          <div className="sticky top-0 h-screen w-screen flex items-center justify-center z-10 bg-green-800">
-            <h1 className="text-6xl font-bold text-white">TO JEST OVERLAY 1</h1>
-          </div>
-  
-          <div className="sticky top-0 h-screen w-screen flex items-center justify-center z-20 bg-blue-800">
-            <h1 className="text-6xl font-bold text-white">TO JEST OVERLAY 2</h1>
-          </div>
-        </section>
-      </div>
-    )
-  }
-  
-  export default Over
+
+  const ref = useRef(null);
+
+  const { scrollYProgress: scrollYProgress } = useScroll();
+  const translateY = useTransform(scrollYProgress, [0, 1], [0, -900]);
+
+
+
+  return (
+    <div className="overscroll-none">
+      <section className="relative w-screen h-[400vh]">
+        {/* Sekcja tła */}
+        <div ref={ref} className="sticky top-0 h-screen w-screen flex items-center justify-center z-0">
+          <motion.img
+            src="firma.png"
+            alt="firma"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ y: translateY }}
+          />
+        </div>
+
+        {/* Overlay 1 */}
+        <motion.div className="sticky top-0 h-screen w-screen flex items-center justify-center z-10 bg-green-800" >
+          <h1 className="text-6xl font-bold text-white">TO JEST OVERLAY 1</h1>
+        </motion.div>
+
+        {/* Overlay 2 */}
+        <div className="sticky top-0 h-screen w-screen flex items-center justify-center z-20 bg-blue-800">
+          <h1 className="text-6xl font-bold text-white">TO JEST OVERLAY 2</h1>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Over;
+
+
   
   
   
