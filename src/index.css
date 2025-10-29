@@ -49,3 +49,7 @@
     --font-montserrat: 'montserrat', sans-serif;
     --font-numans: 'Numans', sans-serif;
 }
+
+html{
+    @apply overscroll-none;
+}

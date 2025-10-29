@@ -4,12 +4,12 @@ import { Zap, Grid, Plug } from "lucide-react";
 
 const AltiusLab = () => {
   return (
-    <div className="w-screen bg-slate-900 py-20">
+    <div className="w-screen bg-white py-20 overscroll-none">
       <div className=" flex items-center justify-center">
         <div className="flex flex-col items-start justify-center max-w-[1200px] w-full">
-          <div className="flex flex-col items-start justify-between gap-10 max-w-6xl py-20">
-            <div className="flex flex-col items-start justify-between gap-4">
-              <h3 className="text-[2.8rem] text-white font-montserrat font-medium tracking-tight leading-tight">
+          <div className="flex items-center justify-between gap-10 max-w-6xl py-20 w-full">
+            <div className="flex flex-col items-start justify-between gap-4 flex-1">
+              <h3 className="text-[2.8rem] text-black font-montserrat font-medium tracking-tight leading-tight">
                 Altius instantly optimizes <br />
                 your blockchain’s speed, <br />
                 cost, storage, and more
@@ -23,19 +23,22 @@ const AltiusLab = () => {
                 costs and gives blockchains enterprise-grade performance without
                 rewrites or hard forks.
               </p>
-            </div>
-
             <div className="flex items-center gap-4 mt-6">
-              <button className="bg-emerald-900 hover:bg-orange-700 text-white px-6 py-3  font-montserrat font-medium transition">
+              <button className="bg-emerald-900 hover:bg-orange-700 text-black px-6 py-3  font-montserrat font-medium transition">
                 Integrate with Altius ↗
               </button>
-              <button className="border border-zinc-500 hover:bg-zinc-800 text-white px-6 py-3  font-montserrat font-medium transition">
+              <button className="border border-zinc-500 hover:bg-zinc-800 text-black px-6 py-3  font-montserrat font-medium transition">
                 Follow us on 𝕏
               </button>
             </div>
+            </div>
+
+            <div className="flex justify-center items-center flex-1">
+              <img src="/logo_black.png" alt="" />
+            </div>
           </div>
 
-          <div className="flex gap-4 w-full text-white pb-20 font-numans">
+          <div className="flex gap-4 w-full text-black pb-20 font-numans">
             <div className="relative flex-1 border border-emerald-900 p-6 flex flex-col justify-between gap-8">
               <div className="absolute top-[-1px] left-[-1px] w-2 h-2">
                 <div className="absolute top-0 left-0 w-2 h-[2px] bg-white"></div>
@@ -58,7 +61,7 @@ const AltiusLab = () => {
               </div>
 
               <div>
-                <div className="flex items-center justify-between text-white font-suse-mono ">
+                <div className="flex items-center justify-between text-black font-suse-mono ">
                   <span>01</span>
                   <Zap className="w-5 h-5" />
                 </div>
@@ -94,7 +97,7 @@ const AltiusLab = () => {
                 <div className="absolute bottom-0 right-0 h-2 w-[2px] bg-white"></div>
               </div>
               <div>
-                <div className="flex items-center justify-between text-white font-suse-mono">
+                <div className="flex items-center justify-between text-black font-suse-mono">
                   <span>02</span>
                   <Grid className="w-5 h-5" />
                 </div>
@@ -130,7 +133,7 @@ const AltiusLab = () => {
                 <div className="absolute bottom-0 right-0 h-2 w-[2px] bg-white"></div>
               </div>
               <div>
-                <div className="flex items-center justify-between text-white font-suse-mono mb-2">
+                <div className="flex items-center justify-between text-black font-suse-mono mb-2">
                   <span>03</span>
                   <Plug className="w-5 h-5" />
                 </div>
