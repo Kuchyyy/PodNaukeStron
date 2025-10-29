@@ -1,11 +1,12 @@
-import Over from "./components/Over"
+import AltiusLab from "./components/AltiusLab"
+
 
 function App() {
 
   return (
 
     <div >
-      <Over />
+      <AltiusLab />
     </div>
 
   )

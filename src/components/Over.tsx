@@ -15,7 +15,7 @@ const Over = () => {
   return (
     <div className="overscroll-none">
       <section className="relative w-screen h-[400vh]">
-        {/* Sekcja tła */}
+
         <div ref={ref} className="sticky top-0 h-screen w-screen flex items-center justify-center z-0">
           <motion.img
             src="firma.png"
@@ -25,12 +25,12 @@ const Over = () => {
           />
         </div>
 
-        {/* Overlay 1 */}
+
         <motion.div className="sticky top-0 h-screen w-screen flex items-center justify-center z-10 bg-green-800" >
           <h1 className="text-6xl font-bold text-white">TO JEST OVERLAY 1</h1>
         </motion.div>
 
-        {/* Overlay 2 */}
+ 
         <div className="sticky top-0 h-screen w-screen flex items-center justify-center z-20 bg-blue-800">
           <h1 className="text-6xl font-bold text-white">TO JEST OVERLAY 2</h1>
         </div>
