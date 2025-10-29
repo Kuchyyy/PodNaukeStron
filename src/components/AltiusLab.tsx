@@ -14,10 +14,10 @@ const AltiusLab = () => {
                 your blockchain’s speed, <br />
                 cost, storage, and more
               </h3>
-              <p className="text-xl font-montserrat text-emerald-900">
+              <p className="text-xl font-montserrat text-green-900">
                 Meet Altius Labs
               </p>
-              <p className="text-lg font-montserrat text-zinc-400 leading-relaxed max-w-xl">
+              <p className="text-lg font-numans text-zinc-400 leading-relaxed max-w-xl">
                 Faster execution. Smarter storage. Zero migrations. With
                 parallel execution and memory-first sharding, Altius cuts infra
                 costs and gives blockchains enterprise-grade performance without
@@ -35,30 +35,30 @@ const AltiusLab = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 w-full text-white pb-20 font-suse-mono">
+          <div className="flex gap-4 w-full text-white pb-20 font-numans">
             <div className="relative flex-1 border border-emerald-900 p-6 flex flex-col justify-between gap-8">
               <div className="absolute top-[-1px] left-[-1px] w-2 h-2">
-                <div className="absolute top-0 left-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute top-0 left-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute top-0 left-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute top-0 left-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div className="absolute top-[-1px] right-[-1px] w-2 h-2">
-                <div className="absolute top-0 right-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute top-0 right-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute top-0 right-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute top-0 right-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div className="absolute bottom-[-1px] left-[-1px] w-2 h-2">
-                <div className="absolute bottom-0 left-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute bottom-0 left-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute bottom-0 left-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute bottom-0 left-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div className="absolute bottom-[-1px] right-[-1px] w-2 h-2">
-                <div className="absolute bottom-0 right-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute bottom-0 right-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute bottom-0 right-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute bottom-0 right-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div>
-                <div className="flex items-center justify-between text-emerald-900 font-suse-mono ">
+                <div className="flex items-center justify-between text-white font-suse-mono ">
                   <span>01</span>
                   <Zap className="w-5 h-5" />
                 </div>
@@ -75,26 +75,26 @@ const AltiusLab = () => {
 
             <div className="relative flex-1 border border-emerald-900 p-6 flex flex-col justify-between gap-8">
               <div className="absolute top-[-1px] left-[-1px] w-2 h-2">
-                <div className="absolute top-0 left-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute top-0 left-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute top-0 left-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute top-0 left-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div className="absolute top-[-1px] right-[-1px] w-2 h-2">
-                <div className="absolute top-0 right-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute top-0 right-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute top-0 right-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute top-0 right-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div className="absolute bottom-[-1px] left-[-1px] w-2 h-2">
-                <div className="absolute bottom-0 left-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute bottom-0 left-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute bottom-0 left-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute bottom-0 left-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div className="absolute bottom-[-1px] right-[-1px] w-2 h-2">
-                <div className="absolute bottom-0 right-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute bottom-0 right-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute bottom-0 right-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute bottom-0 right-0 h-2 w-[2px] bg-white"></div>
               </div>
               <div>
-                <div className="flex items-center justify-between text-emerald-900 font-suse-mono">
+                <div className="flex items-center justify-between text-white font-suse-mono">
                   <span>02</span>
                   <Grid className="w-5 h-5" />
                 </div>
@@ -111,26 +111,26 @@ const AltiusLab = () => {
 
             <div className="relative flex-1 border border-emerald-900 p-6 flex flex-col justify-between gap-8">
               <div className="absolute top-[-1px] left-[-1px] w-2 h-2">
-                <div className="absolute top-0 left-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute top-0 left-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute top-0 left-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute top-0 left-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div className="absolute top-[-1px] right-[-1px] w-2 h-2">
-                <div className="absolute top-0 right-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute top-0 right-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute top-0 right-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute top-0 right-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div className="absolute bottom-[-1px] left-[-1px] w-2 h-2">
-                <div className="absolute bottom-0 left-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute bottom-0 left-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute bottom-0 left-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute bottom-0 left-0 h-2 w-[2px] bg-white"></div>
               </div>
 
               <div className="absolute bottom-[-1px] right-[-1px] w-2 h-2">
-                <div className="absolute bottom-0 right-0 w-2 h-[2px] bg-stone-900"></div>
-                <div className="absolute bottom-0 right-0 h-2 w-[2px] bg-stone-900"></div>
+                <div className="absolute bottom-0 right-0 w-2 h-[2px] bg-white"></div>
+                <div className="absolute bottom-0 right-0 h-2 w-[2px] bg-white"></div>
               </div>
               <div>
-                <div className="flex items-center justify-between text-emerald-900 font-suse-mono mb-2">
+                <div className="flex items-center justify-between text-white font-suse-mono mb-2">
                   <span>03</span>
                   <Plug className="w-5 h-5" />
                 </div>
