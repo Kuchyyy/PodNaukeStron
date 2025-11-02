@@ -1,4 +1,5 @@
-import AltiusLab from "./components/AltiusLab"
+
+import Sticky from "./components/Sticky"
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
   return (
 
     <div >
-      <AltiusLab />
+      <Sticky />
     </div>
 
   )

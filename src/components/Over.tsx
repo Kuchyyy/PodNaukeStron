@@ -8,7 +8,7 @@ const Over = () => {
   const ref = useRef(null);
 
   const { scrollYProgress: scrollYProgress } = useScroll();
-  const translateY = useTransform(scrollYProgress, [0, 1], [0, -900]);
+  const translateY = useTransform(scrollYProgress, [0, 1], [0, -1000]);
 
 
 
@@ -16,11 +16,11 @@ const Over = () => {
     <div className="overscroll-none">
       <section className="relative w-screen h-[400vh]">
 
-        <div ref={ref} className="sticky top-0 h-screen w-screen flex items-center justify-center z-0">
+        <div ref={ref} className="sticky top-0 h-screen w-screen flex items-center justify-center z-0 bg-black">
           <motion.img
-            src="firma.png"
+            src="bg.png"
             alt="firma"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover blur-md"
             style={{ y: translateY }}
           />
         </div>
