@@ -1,5 +1,6 @@
 
-import Sticky from "./components/Sticky"
+
+import Home from "./components/ReactRouter/Home"
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   return (
 
     <div >
-      <Sticky />
+      <Home />
     </div>
 
   )
