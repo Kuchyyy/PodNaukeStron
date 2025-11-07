@@ -1,20 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./components/ReactRouter/Home";
-import About from "./components/ReactRouter/About";
-import Offer from "./components/ReactRouter/Offer";
-import PageNotFound from "./components/ReactRouter/PageNotFound";
+import Navcw from "./components/Dropdown/Navcw";
+import Page from "./components/Dropdown/Page";
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/offer" element={<Offer />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <Navcw />
+      <Page />
+    </div>
   );
 }
 
