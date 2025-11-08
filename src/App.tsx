@@ -1,15 +1,12 @@
 
-import Navcw from "./components/Dropdown/Navcw";
-import Page from "./components/Dropdown/Page";
-import StickyCard from "./components/Nauka/StickyCard";
+import ToDoApp from "./components/Supabase/ToDoApp";
+
 
 
 function App() {
   return (
     <div>
-      <Navcw />
-      <Page />
-      <StickyCard />
+      <ToDoApp />
     </div>
   );
 }
