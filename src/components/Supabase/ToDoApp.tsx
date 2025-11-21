@@ -65,7 +65,7 @@ export default function ToDoApp() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-10">
       <div className="mx-auto w-full max-w-md rounded-2xl bg-white/90 p-6 shadow-xl ring-1 ring-black/5">
         <h1 className="mb-6 text-center text-2xl font-bold tracking-tight text-slate-800">
-          ✅ Supabase To-Do (React + TS + Tailwind)
+           To-Do 
         </h1>
 
         <form onSubmit={addTodo} className="mb-4 flex gap-2">

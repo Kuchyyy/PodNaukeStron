@@ -1,12 +1,9 @@
-
-import ToDoApp from "./components/Supabase/ToDoApp";
-
-
+import Click from "./components/Nauka/Click";
 
 function App() {
   return (
     <div>
-      <ToDoApp />
+      <Click />
     </div>
   );
 }
